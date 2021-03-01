@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "bringEmployee";
+}
+
+<h2>resultEmployee</h2>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+Employee Id <input type="text" id="employeeId"/>
+<input type="button" id="bringEmployee" value="Bring Employee" />
+<div id="employee"></div>
+<script>
+    $(document).ready(function () {
+        $("#bringEmployee").click(function () {
+            var employeeId = $("#employeeId").val();
+            $.getJSON('../api/employee/' + employeeId)
+                .done(function (data) {
+                    var employeeInfo = data.name + " " + data.lastName
+
+                    $('#employee').html(employeeInfo);
+
+            })
+        })
+    })
+</script>

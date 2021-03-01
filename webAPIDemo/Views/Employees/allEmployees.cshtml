@@ -14,10 +14,10 @@
     $(document).ready(function () {
         console.log("scripte girdi!");
         $("#employeeList").click(function () {
-            $.getJSON('../api/employee').done(function (veri) {
+            $.getJSON('../api/employee').done(function (data) {
                 var employees = "";
-                $.each(veri, function (key, employee) {
-                    employees += employee.ad + " " + employee.soyAd + "<br/>";
+                $.each(data, function (key, employee) {
+                    employees += employee.name + " " + employee.lastName + "<br/>";
                 });
                 $("#employees").html(employees);
             })
