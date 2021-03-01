@@ -23,5 +23,10 @@ namespace webAPIDemo.Controllers
             return View();
         }
 
+        public ActionResult createEmployee()
+        {
+            return View();
+        }
+
     }
 }

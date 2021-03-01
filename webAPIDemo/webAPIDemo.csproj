@@ -217,6 +217,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Employees\allEmployees.cshtml" />
     <Content Include="Views\Employees\bringEmployee.cshtml" />
+    <Content Include="Views\Employees\createEmployee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

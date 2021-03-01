@@ -14,15 +14,23 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar">
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                                    
+                
+                <ul class="nav navbar-nav ">
+                    <li>@Html.ActionLink("webAPIDemo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("All Employees |GET|", "allEmployees", "Employees", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Bring Employee |GET|", "bringEmployee", "Employees", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Create Employee |POST|", "createEmployee", "Employees", new { area = "" }, null)</li>
+
+
                 </ul>
+            </div>
+            <div class="navbar-collapse collapse">
+                
             </div>
         </div>
     </div>

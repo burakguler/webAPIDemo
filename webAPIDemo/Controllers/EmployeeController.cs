@@ -31,21 +31,16 @@ namespace webAPIDemo.Controllers
             return Ok(wantedEmployee);
         }
 
-        // GET: api/Employee
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        //// GET: api/Employee/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        // POST: api/Employee
-        public void Post([FromBody]string value)
+        public IHttpActionResult PostEmployee(Employee employee)
         {
+            if (listEmployees.Where(p=>p.Id==employee.Id).Count()==0)
+            {
+                return Ok();
+            }
+            else
+            {
+                return Conflict();
+            }
         }
 
         // PUT: api/Employee/5
